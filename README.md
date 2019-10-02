@@ -1,2 +1,10 @@
-# onix-kubernetes-templates
-Templates for internal kubernetes claster
+# Onix Systems Kubernetes
+Основные разделы:
+* [С чего начать](###)
+* [CI\CD](###)
+  * [Deploy Token](###)
+  * [Переменные](###)
+  * [Persistent Volumes](###)
+* [Логирование](###)
+* [Анализатор кода](###)
+* [База данных](###)
