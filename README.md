@@ -3,7 +3,7 @@
 * [Основные понятия](###)
 * [CI\CD](###)
   * [Deploy Token](manual/PULL_SECRET.MD)
-  * [Переменные создание и передача](manual/VARIABLES.MD)
+  * [Переменные создание и использование](manual/VARIABLES.MD)
   * [Persistent Volumes](###)
   * [WebSocket](###)
 * [Логирование](###)
