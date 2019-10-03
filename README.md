@@ -5,7 +5,6 @@
   * [Kind Deployment](manual/KIND_DEPLOYMENT.MD)
   * [Kind Services](manual/KIND_SERVICES.MD)
   * [Kind Ingress](manual/KIND_INGRESS.MD)
-  * [Kind ConfigMap](manual/KIND_CONFIGMAP.MD)
   * [Persistent Volumes](manual/PERSISTENTVOLUMES.MD)
   * [Deploy Token](manual/PULL_SECRET.MD)
   * [Переменные создание и использование](manual/VARIABLES.MD)
