@@ -70,3 +70,9 @@ spec:
         - containerPort: 3000
 ```
 Имя образа и порт который пробрасывается с контейнера
+
+```
+      imagePullSecrets:
+      - name: gitlab-registry
+```
+imagePullSecrets - нужен для деплоймента докер образа с приватного репозитория. Смотрите раздел [Deploy Token](manual/PULL_SECRET.MD)
