@@ -1,8 +1,8 @@
 # Onix Systems Kubernetes
 Основные разделы:
-* [Зачем это нужно](###)
+* [Основные понятия](###)
 * [CI\CD](###)
-  * [Deploy Token](###)
+  * [Deploy Token](manual/PULL_SECRET.MD)
   * [Переменные](###)
   * [Persistent Volumes](###)
   * [WebSocket](###)
