@@ -1,5 +1,9 @@
 # Передача imagePullSecrets (если приватный проект)
 
+Для чего нужен imagePullSecrets и что такое Deploy Token?
+
+Деплоймент происходит на база докер контейнеров, которые хранятся под каждым пользователем отдельно. Так как все репозитории приватные, для для выкачки образа нам нужно передать Deploy Token.
+
 Для передачи imagePullSecrets нужно создать Deploy Token.
 
 - Идем в  Settings → Repository  → Deploy Tokens и создаем новый Deploy Token
@@ -17,4 +21,12 @@
 
 ```
 - kubectl create secret -n "$NAMESPACE_NAME" docker-registry gitlab-registry --docker-server="$CI_REGISTRY" --docker-username="$REGISTRY_DEPLOY_LOGIN" --docker-password="$REGISTRY_DEPLOY_TOKEN" --docker-email="$GITLAB_USER_EMAIL" -o yaml --dry-run | kubectl replace -n "$NAMESPACE_NAME" --force -f -
+```
+
+Передача imagePullSecrets в деплоймент конфиге:
+
+```
+      imagePullSecrets:
+      - name: gitlab-registry
+
 ```
