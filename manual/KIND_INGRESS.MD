@@ -1,5 +1,7 @@
 # Kind Ingress Контроллер
 
+Ingress - точка вхождения в приложения
+
 ```
 apiVersion: extensions/v1beta1
 kind: Ingress
