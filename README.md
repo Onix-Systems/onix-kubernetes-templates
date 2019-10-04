@@ -1,6 +1,6 @@
 # Onix Systems Kubernetes
 Основные разделы:
-* [Основные понятия](###)
+* [Основные понятия](manual/MAIN.MD)
 * [CI\CD](###)
   * [Kind Deployment](manual/KIND_DEPLOYMENT.MD)
   * [Kind Services](manual/KIND_SERVICES.MD)
