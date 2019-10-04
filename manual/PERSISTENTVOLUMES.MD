@@ -77,3 +77,21 @@ spec:
   hostPath:
     path: "/home/ubuntu/kuber_project_data/__NAMESPACE_NAME__"
 ```
+Часть конфигурации PersistentVolume отвечающая за монтирование директории на сервере
+
+```
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: __NAMESPACE_NAME__-db-data-claim
+  namespace: __NAMESPACE_NAME__
+spec:
+  volumeName: __NAMESPACE_NAME__-dbdata
+  storageClassName: local-storage
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+```
+PersistentVolumeClaim отвечает за соединение части конфигурации деплоймента с PersistentVolume
