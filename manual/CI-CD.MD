@@ -73,5 +73,7 @@ dp.yml - Файл деплоя проекта в кубернетес состо
 * [Kind Deployment](KIND_DEPLOYMENT.MD)
 * [Kind Services](KIND_SERVICES.MD)
 * [Kind Ingress](KIND_INGRESS.MD)
+
 Так же, при необходимости вашего проекта, можно использовать
-* [Persistent Volumes](manual/PERSISTENTVOLUMES.MD)
+
+* [Persistent Volumes](PERSISTENTVOLUMES.MD)
