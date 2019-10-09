@@ -10,7 +10,7 @@
   * [Persistent Volumes](manual/PERSISTENTVOLUMES.MD)
   * [Deploy Token](manual/PULL_SECRET.MD)
   * [WebSocket](manual/WEBSOCKET.MD)
-* [Логирование](###)
+* [Логирование](manual/LOGS.MD)
 * [Анализатор кода](###)
 * [База данных](###)
 
