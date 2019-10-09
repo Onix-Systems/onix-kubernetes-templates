@@ -23,3 +23,12 @@ Git репозиторий: https://gitlab.onix.ua
 - Наблюдать за процессом деплоймента
 
 - Перейти на DNS имя вашего проекта
+
+
+# ОСНОВНЫЕ ПОНЯТИЯ
+
+- Pod -
+- Deployment -
+- Service -
+- Ingress -
+- Persistent Volume -
