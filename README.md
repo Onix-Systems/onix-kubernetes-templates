@@ -1,4 +1,4 @@
-![Kubernetes](https://logos-download.com/wp-content/uploads/2018/09/Kubernetes_Logo.png "Onix Systems Kubernetes")
+# Kubernetes Onix Systems
 
 Основные разделы:
 * [Основные понятия](manual/MAIN.MD)
