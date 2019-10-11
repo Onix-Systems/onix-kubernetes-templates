@@ -28,7 +28,7 @@ variables:
   - sed -i -e "s@__REPOSITORY_IMAGE__@${REPOSITORY_IMAGE_EX_NGINX}@g" dp-back-nginx-ex.yml
   - kubectl apply -f dp-back-nginx-ex.yml
 ```
-Где с переменной REPOSITORY_IMAGE_EX_NGINX мы подставляем значение в [переменную для деплоя](VARIABLES.MD#переменные-деплоймента) *__REPOSITORY_IMAGE__*
+Где с переменной REPOSITORY_IMAGE_EX_NGINX мы подставляем значение в [переменную для деплоя](VARIABLES.MD#переменные-деплоймента) `__REPOSITORY_IMAGE__`
 
 
 
