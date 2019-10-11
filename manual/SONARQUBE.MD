@@ -6,7 +6,6 @@ SonarQube — платформа с открытым исходным кодом
 
 ```
 ...
-
 stages:
   - analysis
 
@@ -14,7 +13,7 @@ project-analysis-code:
   stage: analysis
   image: ciricihq/gitlab-sonar-scanner:3.2.1
   variables:
-    SONAR_URL: https://sonarqube.staging.onix.ua
+    SONAR_URL: http://sonarqube-sonarqube.sonarqube:9000
     SONAR_ANALYSIS_MODE: publish
   only:
   - master
@@ -22,6 +21,7 @@ project-analysis-code:
   - gitlab-sonar-scanner -Dsonar.login=$SONAR_LOGIN -Dsonar.gitlab.ref_name=$CI_COMMIT_REF_NAME -Dsonar.gitlab.project_id=$CI_PROJECT_ID -Dsonar.gitlab.commit_sha=$CI_COMMIT_SHA -Dsonar.gitlab.url=https://gitlab.onix.ua/
   tags:
   - kuber
+...
 ```
 
 После чего, в пайплайне появится ещё один стейдж project-analysis-code в котором будет анализироваться ваш код. 
