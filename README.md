@@ -12,7 +12,7 @@
   * [WebSocket](manual/WEBSOCKET.MD)
   * [SSL Сертификаты](manual/CERTS.MD)
 * [Логирование](manual/LOGS.MD)
-* [Анализатор кода](###)
+* [Анализатор кода](manual/SONARQUBE.MD)
 * [База данных](manual/DATABASE.MD)
 
 [Часто задаваемые вопросы](manual/FAQ.MD)
