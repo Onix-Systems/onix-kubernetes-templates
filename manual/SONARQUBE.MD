@@ -32,4 +32,4 @@ project-analysis-code:
 
 Более подробно информацию можно прочесть в комментариях к текущему коммиту:
 
-![Kubernetes](http://i.piccy.info/i9/72f9f8526d7322e8a3e3afd9b715ddb3/1570776420/54904/1333933/sonar2.png)
+![Kubernetes](http://i.piccy.info/i9/d9f045b90e66c41d4ee308c06cc055e6/1570776625/71423/1333933/sonar3.png)
