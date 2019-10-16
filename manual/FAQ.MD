@@ -99,3 +99,27 @@ build:
 
 ## У меня ошибка error: flag docker-username is required
 - Сгенерируйте [Deploy Token](PULL_SECRET.MD)
+
+
+
+## Как мне задать client_max_body_size 
+- client_max_body_size задается анотациями в [Ingress контроллере](KIND_INGRESS.MD)
+
+Пример:
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: __CI_PROJECT_NAME__-ingress
+  namespace: __NAMESPACE_NAME__
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "true"
+    kubernetes.io/tls-acme: "true"
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/proxy-body-size: "100m"
+spec:
+  tls:
+  - hosts:
+...
+```
