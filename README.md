@@ -17,4 +17,6 @@
 
 [Часто задаваемые вопросы](manual/FAQ.MD)
 
+[Описание примеров](manual/EXAMPLES.MD)
+
 [Полезные ссылки](manual/LINKS.MD)
