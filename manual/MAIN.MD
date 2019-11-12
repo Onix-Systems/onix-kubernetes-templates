@@ -4,7 +4,7 @@
 
 Git репозиторий: https://gitlab.onix.ua
 
-Мониторинг логов: https://logs.staging.onix.ua
+Мониторинг логов: https://logs.staging.onix.ua (теже логин/пароль что и для gitlab)
 
 Менеджер MySQL: http://mysql.staging.onix.ua/
 
