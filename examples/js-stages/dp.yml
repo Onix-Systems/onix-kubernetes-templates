@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     run: nginx
-  name: __CI_PROJECT_NAME__-deployment
+  name: __CI_PROJECT_NAME__
   namespace: __NAMESPACE_NAME__
 spec:
   replicas: 1
@@ -55,7 +55,7 @@ spec:
   tls:
   - hosts:
     - __HOSTNAME__.staging.onix.ua
-    secretName: __HOSTNAME__.staging.onix.ua-certificate-1
+    secretName: ssl-cert
   rules:
   - host: __HOSTNAME__.staging.onix.ua
     http:

@@ -56,7 +56,7 @@ spec:
   tls:
   - hosts:
     - __HOSTNAME__.staging.onix.ua
-    secretName: __HOSTNAME__.staging.onix.ua-certificate
+    secretName: ssl-cert
   rules:
   - host: __HOSTNAME__.staging.onix.ua
     http:
