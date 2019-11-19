@@ -10,7 +10,7 @@
 * [Зачем нужны переменные деплоймента](FAQ.MD#зачем-нужны-переменные-деплоймента)
 * [У меня ошибка error: flag docker-username is required](FAQ.MD#у-меня-ошибка-error-flag-docker-username-is-required)
 * [Как мне задать client_max_body_size](FAQ.MD#как-мне-задать-client_max_body_size)
-* [Как отключить redirect на https](FAQ.MD#как-мне-задать-client_max_body_size)
+* [Как отключить redirect на https](FAQ.MD#как-отключитьredirect-на-https)
 
 ## Где взять примеры для деплоймента (Examples) ?
 - Их можно взять в этом репозитории, директория [examples](../examples)
