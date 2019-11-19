@@ -10,7 +10,7 @@
 * [Зачем нужны переменные деплоймента](FAQ.MD#зачем-нужны-переменные-деплоймента)
 * [У меня ошибка error: flag docker-username is required](FAQ.MD#у-меня-ошибка-error-flag-docker-username-is-required)
 * [Как мне задать client_max_body_size](FAQ.MD#как-мне-задать-client_max_body_size)
-
+* [Как отключить redirect на https](FAQ.MD#как-мне-задать-client_max_body_size)
 
 ## Где взять примеры для деплоймента (Examples) ?
 - Их можно взять в этом репозитории, директория [examples](../examples)
@@ -119,6 +119,37 @@ metadata:
     certmanager.k8s.io/cluster-issuer: letsencrypt-prod
     kubernetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/proxy-body-size: "100m"
+spec:
+  tls:
+  - hosts:
+...
+```
+
+## Как отключитьredirect на https
+- Для этого нам нужно отредактировать [Ingress контроллере](KIND_INGRESS.MD). Просто убрать анотации:
+
+```
+    ingress.kubernetes.io/ssl-redirect: "true"
+    kubernetes.io/tls-acme: "true"
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+```
+И в место них добавить:
+```
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+```
+
+Пример ингресс контроллера без переадресации на https:
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: __CI_PROJECT_NAME__-ingress
+  namespace: __NAMESPACE_NAME__
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    kubernetes.io/ingress.class: "nginx"
 spec:
   tls:
   - hosts:
