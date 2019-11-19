@@ -126,7 +126,7 @@ spec:
 ```
 
 ## Как отключитьredirect на https
-- Для этого нам нужно отредактировать [Ingress контроллере](KIND_INGRESS.MD). Просто убрать анотации:
+- Для этого нам нужно отредактировать [Ingress контроллер](KIND_INGRESS.MD). Просто убрать не нужные анотации:
 
 ```
     ingress.kubernetes.io/ssl-redirect: "true"
