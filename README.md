@@ -19,4 +19,6 @@
 
 [Описание примеров](manual/EXAMPLES.MD)
 
+[Оповещения из проекта в телеграм](manual/TELEGRAM.MD)
+
 [Полезные ссылки](manual/LINKS.MD)
