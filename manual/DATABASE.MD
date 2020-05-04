@@ -10,7 +10,7 @@
 - MySQL: *mysql.db-srv*
 - PostgreSQL: *postgresql.db-srv*
 
-Для подключения воспользуйтесь данными с README.MD вашего проекта на Gitlab, например:
+Для подключения воспользуйтесь данными с раздела Wiki, страница Database Credentials вашего проекта на Gitlab:
 
 ![Kubernetes](http://i.piccy.info/i9/bdcfdc80bfc87c62e9103de5212befd2/1570728929/7075/1341919/Snymok.png)
 
