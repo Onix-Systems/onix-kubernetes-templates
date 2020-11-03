@@ -1,0 +1,39 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: nginx
+  name: __CI_PROJECT_NAME__-redis
+  namespace: __NAMESPACE_NAME__
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: __CI_PROJECT_NAME__-redis
+      app: __CI_PROJECT_NAME__-redis
+  template:
+    metadata:
+      labels:
+        run: __CI_PROJECT_NAME__-redis
+        app: __CI_PROJECT_NAME__-redis
+    spec:
+      containers:
+        - name: redis
+          image: redis:latest
+          ports:
+            - containerPort: 6379
+      imagePullSecrets:
+        - name: gitlab-registry
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: __CI_PROJECT_NAME__-redis
+  namespace: __NAMESPACE_NAME__
+spec:
+  selector:
+    app: __CI_PROJECT_NAME__-redis
+  ports:
+    - protocol: TCP
+      port: 6379
+      targetPort: 6379
