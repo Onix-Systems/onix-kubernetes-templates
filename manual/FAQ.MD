@@ -11,7 +11,7 @@
 * [У меня ошибка error: flag docker-username is required](FAQ.MD#у-меня-ошибка-error-flag-docker-username-is-required)
 * [Как мне задать client_max_body_size](FAQ.MD#как-мне-задать-client_max_body_size)
 * [Как отключить redirect на https](FAQ.MD#как-отключить-redirect-на-https)
-* [Как настроить почту](FAQ.MD#как-отключить-redirect-на-https)
+* [Как настроить почту](FAQ.MD#как-настроить-почту)
 
 ## Где взять примеры для деплоймента (Examples) ?
 - Их можно взять в этом репозитории, директория [examples](../examples)
@@ -157,8 +157,6 @@ spec:
 ...
 ```
 ## Как настроить почту
-- Сгенерируйте [Deploy Token](PULL_SECRET.MD)
-
 Добавляем hostAliases
 
 ```
@@ -181,4 +179,4 @@ spec:
             - "smtp.gmail.com"
 ...
 ```
-И используем настройки smtp.gmail.com:589
+И используем настройки *smtp.gmail.com:589*
