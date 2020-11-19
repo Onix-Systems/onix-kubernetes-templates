@@ -22,3 +22,5 @@
 [Оповещения из проекта в телеграм](manual/TELEGRAM.MD)
 
 [Полезные ссылки](manual/LINKS.MD)
+
+[Деплой API на onix-kubernetes](manual/KUBERNETES_API_DEPLOY.MD)
