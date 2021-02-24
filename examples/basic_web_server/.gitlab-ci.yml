@@ -19,7 +19,7 @@ project-image-package:
   image: docker:18.09.6-dind
   script:
   - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN ${CI_REGISTRY}
-  - docker build -t ${REPOSITORY_IMAGE} .
+  - docker build --network=host -t ${REPOSITORY_IMAGE} .
   - docker push ${REPOSITORY_IMAGE}
 
 project-deploy:
