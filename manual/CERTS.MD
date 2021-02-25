@@ -2,8 +2,6 @@
 
 За регистрацию https сертификатов отвечает [ингресс контроллер](KIND_INGRESS.MD).
 
-По стандартному включен сертификат типа staging
-
 ```
 apiVersion: extensions/v1beta1
 kind: Ingress
