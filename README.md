@@ -25,6 +25,9 @@
 -----
 
 [Переезд Worker Node](manual/.MD)
+
 [Переезд Master Node](manual/.MD)
+
 [Watcher](manual/.MD)
+
 [Ansible](manual/ANSIBLE.MD)
