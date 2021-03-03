@@ -30,7 +30,18 @@ gitlab-rake gitlab:backup:create SKIP=registry
  - gitlab-secrets.json - файл с секретами 
  - gitlab.rb - конфигурационный файл Gitlab
 #### Database Services:
-.....
+MySQL
+```
+mysqldump -uuser -ppassword --all-databases
+```
+PostgreSQL
+```
+pg_dumpall -U user
+```
+MongoDB
+```
+mongodump --gzip --archive
+```
 
 ### 7. Запускаем Ansible сценарий.
 Используя эту инструкцию
