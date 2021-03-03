@@ -22,6 +22,15 @@ Worker node минимум 32Gb RAM
 
 ### 6. Делаем резервную копию Gitlab и Database Services
 #### Gitlab:
+Внутри контейнера Gitlab выполнить команду
 ```
 gitlab-rake gitlab:backup:create SKIP=registry
 ```
+Так же обязательно нужно скопировать директорию **/etc/gitlab** в ней находятся необходимые файлы:
+ - gitlab-secrets.json - файл с секретами 
+ - gitlab.rb - конфигурационный файл Gitlab
+#### Database Services:
+.....
+
+### 7. Запускаем Ansible сценарий.
+Используя эту инструкцию
