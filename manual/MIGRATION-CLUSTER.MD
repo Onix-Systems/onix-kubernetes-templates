@@ -19,3 +19,9 @@ Worker node минимум 32Gb RAM
 
 ### 5. Останавливаем Database services.
 Этот пункт важен дня того что бы сделать последний актуальный бекап staging databases
+
+### 6. Делаем резервную копию Gitlab и Database Services
+#### Gitlab:
+```
+gitlab-rake gitlab:backup:create SKIP=registry
+```
