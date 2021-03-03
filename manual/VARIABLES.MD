@@ -102,5 +102,7 @@ docker build --build-arg POSTGRES_DB=$POSTGRES_DB --network=host -t ${REPOSITORY
 ```
 
 Где:
+
 $POSTGRES_DB переменная объявленная в  Settings → CI/CD → Variables
+
 POSTGRES_DB= - аргумент в Dockerfile ARG POSTGRES_HOST
