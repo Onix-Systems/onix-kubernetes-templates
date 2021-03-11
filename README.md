@@ -24,10 +24,10 @@
 
 -----
 
-[Переезд Worker Node](manual/.MD)
+[Переезд Worker Node](manual/MIGRATION-WOKER.MD)
 
-[Переезд Master Node](manual/.MD)
+[Переезд Master Node](manual/MIGRATION-CLUSTER.MD)
 
-[Watcher](manual/.MD)
+[Watcher](manual/WATCHER.MD)
 
 [Ansible](manual/ANSIBLE.MD)
