@@ -62,7 +62,21 @@ sudo gitlab-rake gitlab:backup:restore
 Замените gitlab-secrets.json в директории **/etc/gitlab** внутри контейнера GitLab
 
 ### 8. Восстановление резервную копию Database Services.
-
+MySQL:
+```
+mysql -u root -p[root_password] < mysql_dump.sql
+```
+PostgreSQL:
+```
+psql on1x_db on1xus3r -f pg_dump.sql
+```
+MongoDB:
+Восстанавливаем дата-директорию
+```
+docker-compose stop mongo
+tar xzvf mongo.tar.gz
+docker-compose up -d mongo
+```
 
 ### 9. Восстановление резервную копию дата - директории проектов.
 Поместить в директорию ***/home/ubuntu/kuber_projects_data***
