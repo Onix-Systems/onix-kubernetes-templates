@@ -41,7 +41,7 @@ spec:
       app: __CI_PROJECT_NAME__
 ...
 ```
-Здесь видно как мы с помощью переменных подставляем *namespace* и задаем *selector* с помощью `__CI_PROJECT_NAME__`. Эти переменные можно создать свои (при необходимости), три основных из которых описаны выше.
+Здесь видно как мы с помощью переменных подставляем *namespace* и задаем *selector* с помощью переменной `__CI_PROJECT_NAME__`. Можно объявить свои переменные  (при необходимости).
 
 ## Переменные проекта
 #### Создание
@@ -62,3 +62,47 @@ spec:
 ![](http://i.piccy.info/i9/c99bd746508325c216cf6aaf47a965fe/1570102688/62377/1333933/Snymok_ekrana_ot_2019_10_03_14_35_53.png)
 
 Здесь мы заполняем файл с переменными для работы приложения
+
+
+## Переменные Dockerfile
+
+В случаи если вам нужно объявить переменные в Dockerfile, можно использовать --build-arg во время билда докер образа, что бы передать переменные контейнеру во время билда
+
+```
+ARG RAILS_MASTER_KEY
+ARG MAIL_PASSWORD
+ARG MAIL_USERNAME
+ARG POSTGRES_DB
+ARG POSTGRES_HOST
+ARG POSTGRES_PASS
+ARG POSTGRES_USER
+ARG RAILS_LOG_TO_STDOUT
+ARG RAILS_SERVE_STATIC_FILES
+ARG RAILS_ENV
+ARG SECRET_KEY_BASE
+
+ENV RAILS_ENV $RAILS_ENV
+ENV RACK_ENV $RAILS_ENV
+ENV SECRET_KEY_BASE $SECRET_KEY_BASE
+ENV RAILS_MASTER_KEY $RAILS_MASTER_KEY
+ENV MAIL_PASSWORD $MAIL_PASSWORD
+ENV MAIL_USERNAME $MAIL_USERNAME
+ENV POSTGRES_DB $POSTGRES_DB
+ENV POSTGRES_HOST $POSTGRES_HOST
+ENV POSTGRES_PASS $POSTGRES_PASS
+ENV POSTGRES_USER $POSTGRES_USER
+ENV RAILS_LOG_TO_STDOUT $RAILS_LOG_TO_STDOUT
+ENV RAILS_SERVE_STATIC_FILES $RAILS_SERVE_STATIC_FILES
+```
+
+.gitlab-ci.yml
+
+```
+docker build --build-arg POSTGRES_DB=$POSTGRES_DB --network=host -t ${REPOSITORY_IMAGE} .
+```
+
+Где:
+
+$POSTGRES_DB переменная объявленная в  Settings → CI/CD → Variables
+
+POSTGRES_DB= - аргумент в Dockerfile ARG POSTGRES_HOST

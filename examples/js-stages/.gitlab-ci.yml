@@ -26,7 +26,7 @@ tests:
     - master
   image: node:12.10-alpine
   script:
-  - apk --no-cache add --virtual native-deps g++ gcc libgcc libstdc++ linux-headers autoconf automake make nasm python git 
+  - apk --no-cache add --virtual native-deps g++ gcc libgcc libstdc++ linux-headers autoconf automake make nasm python git
   - npm install
   - NODE_ENV=test npm run test
 
@@ -54,7 +54,7 @@ package:
   image: docker:18.09.6-dind
   script:
   - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN ${CI_REGISTRY}
-  - docker build -t ${REPOSITORY_IMAGE} .
+  - docker build --network=host -t ${REPOSITORY_IMAGE} .
   - docker push ${REPOSITORY_IMAGE}
 
 deploy:

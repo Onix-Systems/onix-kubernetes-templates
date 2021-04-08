@@ -1,7 +1,7 @@
 # Persistent Volume
 
 
-Persistent Volume - служба отвечающая за сонтирование и сохранение статических данных приложения
+Persistent Volume - служба отвечающая за монтирование и сохранение статических данных приложения. С помощью Persistent Volume вы можете смонтировать постоянную директорию
 ```
 apiVersion: extensions/v1beta1
 kind: Deployment
@@ -59,7 +59,7 @@ spec:
         persistentVolumeClaim:
           claimName: __NAMESPACE_NAME__-db-data-claim
 ```
-Часть конфигурации отвечающая за подключение деплоймента к Persistent Volume
+Часть конфигурации отвечающая за подключение деплоймента (контейнера) к Persistent Volume
 
 ```
 kind: PersistentVolume
@@ -94,4 +94,4 @@ spec:
     requests:
       storage: 5Gi
 ```
-PersistentVolumeClaim отвечает за соединение части конфигурации деплоймента с PersistentVolume
+PersistentVolumeClaim отвечает за соединение части конфигурации деплоймента(контейнера) с PersistentVolume

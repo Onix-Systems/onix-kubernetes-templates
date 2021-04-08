@@ -19,6 +19,15 @@
 
 [Описание примеров](manual/EXAMPLES.MD)
 
-[Оповещения из проекта в телеграм](manual/TELEGRAM.MD)
-
 [Полезные ссылки](manual/LINKS.MD)
+
+
+-----
+
+[Переезд Worker Node](manual/MIGRATION-WOKER.MD)
+
+[Переезд Master Node](manual/MIGRATION-CLUSTER.MD)
+
+[Watcher](manual/WATCHER.MD)
+
+[Ansible](manual/ANSIBLE.MD)
