@@ -11,7 +11,6 @@
 * [У меня ошибка error: flag docker-username is required](FAQ.MD#у-меня-ошибка-error-flag-docker-username-is-required)
 * [Как мне задать client_max_body_size](FAQ.MD#как-мне-задать-client_max_body_size)
 * [Как отключить redirect на https](FAQ.MD#как-отключить-redirect-на-https)
-* [Как настроить почту](FAQ.MD#как-настроить-почту)
 
 ## Где взять примеры для деплоймента (Examples) ?
 - Их можно взять в этом репозитории, директория [examples](../examples)
@@ -156,27 +155,3 @@ spec:
   - hosts:
 ...
 ```
-## Как настроить почту
-Добавляем hostAliases
-
-```
-...
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      run: __CI_PROJECT_NAME__
-      app: __CI_PROJECT_NAME__
-  template:
-    metadata:
-      labels:
-        run: __CI_PROJECT_NAME__
-        app: __CI_PROJECT_NAME__
-    spec:
-      hostAliases:
-        - ip: "165.22.95.189"
-          hostnames:
-            - "smtp.gmail.com"
-...
-```
-И используем настройки *smtp.gmail.com:589*
